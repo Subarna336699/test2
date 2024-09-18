@@ -70,7 +70,7 @@
     </div>
 
     <script>
-        // Function to validate name (must contain two words and no numbers)
+    
         function validateName() {
             const name = document.getElementById("name").value.trim();
             const nameError = document.getElementById("nameError");
@@ -84,7 +84,7 @@
             }
         }
 
-        // Function to validate phone number (must be 6 characters, starting with a digit, allowing letters after the first digit)
+        
         function validatePhone() {
             const phone = document.getElementById("phone").value.trim();
             const phoneError = document.getElementById("phoneError");
@@ -99,7 +99,7 @@
             }
         }
 
-        // Enable/disable submit button based on form validation
+      
         function validateForm() {
             const isNameValid = validateName();
             const isPhoneValid = validatePhone();
@@ -107,7 +107,7 @@
             submitButton.disabled = !(isNameValid && isPhoneValid);
         }
 
-        // Form submission logic
+       
         function submitForm() {
             if (validateName() && validatePhone()) {
                 alert("Form submitted successfully!");
@@ -116,7 +116,7 @@
             }
         }
 
-        // Clear form inputs and error messages
+        
         function clearForm() {
             document.getElementById("name").value = "";
             document.getElementById("phone").value = "";
@@ -125,11 +125,11 @@
             document.getElementById("submit").disabled = true;
         }
 
-        // Add event listeners for validation
+       
         document.getElementById("name").addEventListener("input", validateForm);
         document.getElementById("phone").addEventListener("input", validateForm);
 
-        // Set focus on name field when page loads
+       
         window.onload = function() {
             document.getElementById("name").focus();
         };
